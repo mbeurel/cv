@@ -1,0 +1,128 @@
+/*!
+ * This file is part of the App package.
+ *
+ * (c) Yipikai <support@yipikai.studio>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
+@use "./config/_root";
+@use "./mixin/global" as global;
+@use "./mixin/flex" as flex;
+@use "./libs/__import" with (
+  $grid-container-edge: 0,
+  $grid-container-edge-mobile: 0,
+  $grid-column-count: 12,
+  $grid-column-count-mobile: 12,
+  $grid-column-gap: var(--col-gutter),
+  $grid-column-gap-mobile: var(--col-gutter),
+  $grid-row-gap: var(--row-gutter),
+  $grid-row-gap-mobile: 0,
+);
+@use "~@vivid-web/flexboxgrid-sass/src/flexboxgrid" with (
+  $gutter : (
+    height: 0,
+    width: 0,
+  )
+);
+@import "./components/__import";
+html {
+  font-size: calc(10*100vw/1440);
+}
+html, body {
+  width: 100%;
+  min-height: 100%;
+  background: var(--color-black);
+  @media print {
+    height: 297mm;
+  }
+}
+body {
+  padding:1rem;
+  font-family: var(--font-1-family), serif;
+  @media print {
+    padding: 0;
+  }
+}
+
+#main-container {
+  @include flex.display();
+  margin:0 auto;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  .left-container {
+    @include flex.display();
+    @include flex.direction(column);
+    flex: 1;
+    background: var(--color-left-container);
+    padding: 10rem 8rem 10rem 8rem;
+  }
+  .right-container {
+    @include flex.display();
+    @include flex.direction(column);
+    @include flex.justify-content(flex-start);
+    padding: 13rem 8rem 8rem 8rem;
+    width: 65%;
+    height: 100%;
+  }
+}
+
+.left-container {
+  position:relative;
+  .top-container {
+    .title-picture-container {
+      @include flex.display();
+      @include flex.align-content(center);
+      @include flex.align-items(center);
+      gap: 3rem;
+      padding-bottom: 5rem;
+    }
+    .right-picture {
+      flex: 1;
+    }
+    .picture-content {
+      border-radius: 100%;
+      border: 2px solid #FFF;
+      width: 14rem;
+      height: 14rem;
+      overflow: hidden;
+      img {
+        width: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+  .block-container + .block-container {
+    margin-top: 5rem;
+  }
+  .power-by-content {
+    @include flex.display();
+    @include flex.direction(column);
+    margin-top: auto;
+    .baseline {
+      font-family: var(--font-2-family);
+      font-size: 3rem;
+      letter-spacing: 1px;
+      font-weight: 900;
+      line-height: 3rem;
+      color: var(--color-white);
+      text-transform: uppercase;
+      opacity: 0.8;
+      padding-bottom: 0.5rem;
+      text-decoration: none;
+      .little {
+        font-size: 2rem;
+        line-height: 2rem;
+        position: relative;
+        top: -3px;
+      }
+    }
+    .punchline {
+      font-family: var(--font-1-family);
+      font-size: 0.6em;
+      font-style: italic;
+    }
+  }
+}

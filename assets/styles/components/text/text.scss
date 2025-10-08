@@ -1,0 +1,198 @@
+/*!
+ * This file is part of the App package.
+ *
+ * (c) Yipikai <support@yipikai.studio>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+@use "./../../mixin/global" as global;
+@use "./../../mixin/flex" as flex;
+@use "./../../config/config" as config;
+@use "./../../config/font" as font;
+@use './../../config/variables/yipikai' as yipikai;
+
+.title-area {
+  --font-color: var(--color-title);
+  &.color {
+    --font-color: var(--color-title-second);
+  }
+  &.underline {
+    border-bottom: var(--title-border-size) solid var(--title-border-color);
+    padding-bottom: 0.8rem;
+    margin-bottom: 0.4rem;
+  }
+  &.upper {
+    .value {
+      text-transform: uppercase;
+    }
+  }
+  .title {
+    .value {
+      > .picto {
+        height: 24px;
+        width: 24px;
+        display: inline-block;
+        position: relative;
+        top: 0.4rem;
+        padding: 0 1rem;
+        box-sizing: content-box;
+        @media print {
+          top: 0.5rem;
+          height: 12px;
+          width: 12px;
+          padding: 0 5px;
+        }
+        svg {
+          height: 100%;
+          width: 100%;
+        }
+      }
+    }
+    .link-picto {
+      @media print {
+        top: 0;
+      }
+    }
+  }
+}
+.title-1 + .block-container {
+  padding-top: 7.5rem;
+}
+.title-2 + * {
+  padding-top: 2rem;
+}
+.title-3 + .block-container {
+  padding-top: 1rem;
+}
+.title-1 {
+  --title-border-size: 1px;
+  --title-border-color: var(--font-color, var(--color-black));
+  .value {
+    @extend .font-2-xl;
+  }
+}
+.title-2 {
+  --title-border-size: 1px;
+  --title-border-color: var(--font-color, var(--color-black));
+  .value {
+    @extend .font-2-l;
+  }
+}
+.title-3 {
+  --title-border-size: 1px;
+  --title-border-color: var(--font-color, var(--color-black));
+  .value {
+    @extend .font-2-m;
+  }
+}
+.title-4 {
+  --title-border-size: 1px;
+  --title-border-color: var(--font-color, var(--color-black));
+  .value {
+    @extend .font-2-s;
+  }
+}
+.title-5 {
+  --title-border-size: 1px;
+  --title-border-color: var(--font-color, var(--color-black));
+  .value {
+    @extend .font-2-xs;
+  }
+}
+.list-title {
+  display:inline-block;
+  font-weight: bold;
+  padding-bottom: 0.2rem;
+  position: relative;
+}
+.text-content * {
+  @extend .font-1-m;
+  color: var(--color-text-master);
+}
+.text-headline,
+.text-area {
+  &.md {
+    @extend .font-1-m;
+    color: var(--color-text-master);
+  }
+  &.sm {
+    @extend .font-1-sm;
+    color: var(--color-text-master);
+  }
+  &.lg {
+    @extend .font-1-l;
+    color: var(--color-text-master);
+  }
+  p + ul,
+  ul + p,
+  p + p {
+    padding-top: 1rem;
+  }
+  li {
+    padding-bottom: 1.2rem;
+    padding-left: 1.2rem;
+    position:relative;
+    &:before {
+      content: "●";
+      font-size: 0.6rem;
+      position: absolute;
+      top:0;
+      left:0;
+    }
+  }
+  .picto {
+    height: 16px;
+    width: 16px;
+    display: inline-block;
+    position: relative;
+    padding: 0 0.1rem;
+    top: 0.2rem;
+    box-sizing: content-box;
+    @media print {
+      top: 0.3rem;
+      height: 8px;
+      width: 8px;
+      padding: 0 1px;
+    }
+    svg {
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
+.text-headline {
+  p + ul,
+  ul + p,
+  p + p {
+    padding-top: 0.5rem;
+  }
+}
+.text-area + .title-area {
+  padding-top: 1rem;
+}
+a {
+  color: var(--color-text-master);
+  text-decoration: underline;
+}
+.link-picto {
+  width: 1.2rem;
+  height: 1.2rem;
+  display: inline-block;
+  padding: 0 5px 0 0;
+  box-sizing: content-box;
+  position:relative;
+  .picto {
+    height: 100%;
+    width: 100%;
+  }
+  @media print {
+    top: -1px;
+    width: 6px;
+    height: 6px;
+  }
+  svg {
+    height: 100%;
+    width: 100%;
+  }
+}

@@ -1,0 +1,12 @@
+<ul class="list-with-picto-container">
+  {% block content %}
+    {% for child in children %}
+      <twig:ListWithPictoElement htmlTag="li"
+        entitled="{{ child.entitled }}"
+        url="{{ child.url|default() }}"
+        picto="{{ child.picto|default() }}"
+        class="{{ child.class|default() }}"
+      />
+    {% endfor %}
+  {% endblock %}
+</ul>

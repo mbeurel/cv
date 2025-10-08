@@ -1,0 +1,15 @@
+/*!
+ * This file is part of the App package.
+ *
+ * (c) Yipikai <support@yipikai.studio>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+@use 'variables/yipikai';
+
+$media-desktop-min: "screen and (width > #{yipikai.$breakpoints-lg})";
+$media-desktop-max: "screen and (width <= #{yipikai.$breakpoints-lg})";
+
+$media-mobile-min: "screen and (width > #{yipikai.$breakpoints-xsm})";
+$media-mobile-max: "screen and (width <= #{yipikai.$breakpoints-xsm})";

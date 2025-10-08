@@ -1,0 +1,99 @@
+/*!
+ * This file is part of the App package.
+ *
+ * (c) Yipikai <support@yipikai.studio>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
+@use "./../../styles/config/config" as config;
+@use "./../../styles/mixin/global" as global;
+
+.font {
+  @include global.font-generate(
+    var(--font-family),
+    var(--font-size),
+    var(--font-weight),
+    var(--font-line-height),
+    var(--font-letter-spacing)
+  );
+  color: var(--font-color);
+}
+
+
+/* Font 1 */
+.font-1-l {
+  @extend .font;
+  font-optical-sizing: auto;
+  --font-family: var(--font-1-family);
+  --font-size: 1.8rem;
+  --font-weight: 400;
+  --font-line-height: 2.2rem;
+  --font-letter-spacing: 0;
+}
+.font-1-m {
+  @extend .font;
+  font-optical-sizing: auto;
+  --font-family: var(--font-1-family);
+  --font-size: 1.4rem;
+  --font-weight: 400;
+  --font-line-height: 1.8rem;
+  --font-letter-spacing: 0;
+}
+.font-1-sm {
+  @extend .font;
+  font-optical-sizing: auto;
+  --font-family: var(--font-1-family);
+  --font-size: 1.2rem;
+  --font-weight: 400;
+  --font-line-height: 1.4rem;
+  --font-letter-spacing: 0;
+}
+
+/* Font 2 */
+.font-2-xl {
+  @extend .font;
+  font-optical-sizing: auto;
+  --font-family: var(--font-2-family);
+  --font-size: 3.8rem;
+  --font-weight: 800;
+  --font-line-height: 4.2rem;
+  --font-letter-spacing: 0;
+}
+.font-2-l {
+  @extend .font;
+  font-optical-sizing: auto;
+  --font-family: var(--font-2-family);
+  --font-size: 3.4rem;
+  --font-weight: 600;
+  --font-line-height: 2.4rem;
+  --font-letter-spacing: 0;
+}
+.font-2-m {
+  @extend .font;
+  font-optical-sizing: auto;
+  --font-family: var(--font-2-family);
+  --font-size: 2rem;
+  --font-weight: 600;
+  --font-line-height: 2.2rem;
+  --font-letter-spacing: 0;
+}
+.font-2-s {
+  @extend .font;
+  font-optical-sizing: auto;
+  --font-family: var(--font-2-family);
+  --font-size: 1.4rem;
+  --font-weight: 600;
+  --font-line-height: 1.8rem;
+  --font-letter-spacing: 0;
+}
+.font-2-xs {
+  @extend .font;
+  font-optical-sizing: auto;
+  --font-family: var(--font-2-family);
+  --font-size: 1.2rem;
+  --font-weight: 600;
+  --font-line-height: 1.8rem;
+  --font-letter-spacing: 0;
+}

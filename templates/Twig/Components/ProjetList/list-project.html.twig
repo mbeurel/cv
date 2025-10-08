@@ -1,0 +1,14 @@
+<ul class="project-list-container">
+  {% block content %}
+    {% for child in children %}
+      <twig:ProjectListElement htmlTag="li"
+        entitled="{{ child.entitled }}"
+        subTitle="{{ child.subTitle|default() }}"
+        description="{{ child.description|default() }}"
+        url="{{ child.url|default() }}"
+        class="{{ child.class|default() }}"
+        technos="{{ child.technos|default() }}"
+      />
+    {% endfor %}
+  {% endblock %}
+</ul>

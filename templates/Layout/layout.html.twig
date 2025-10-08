@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="fr">
+{% apply spaceless %}
+<head>
+  <meta name="robots" content="noindex, nofollow">
+  {% block content_head_meta %}
+    {% include 'Layout/head.html.twig' %}
+  {% endblock %}
+  {{ encore_entry_link_tags("app") }}
+</head>
+{% endapply %}
+{% apply spaceless %}
+  <body class="{% block body_class %}page page-{{ page.keyname }}{% endblock %}" data-page-keyname="{{ page.keyname }}" data-uri="{{ app.request.uri }}">
+    <main id="main-container" class="main-content animate-page" role="main">
+      <div class="left-container">
+        {% block left %}{% endblock %}
+      </div>
+      <div class="right-container">
+        <div class="center">
+          {% block content %}{% endblock %}
+        </div>
+      </div>
+    </main>
+    {{ encore_entry_script_tags("app") }}
+  </body>
+{% endapply %}
+</html>

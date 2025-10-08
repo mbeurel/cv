@@ -1,0 +1,19 @@
+<{{ htmlTag }} class="project-content {{ class }}">
+  <h5 class="head">
+    <span class="entitled">{{ entitled }}</span>
+    <span class="sub-title">{{ subTitle }}</span>
+    {% if url|default() %}
+      <a href="{{ url }}" class="link-project"><twig:Picto name="yipikai/link" /></a>
+    {% endif %}
+  </h5>
+  <div class="content">
+    <twig:Text wysiwyg="{{ true }}" value="{{ description }}" theme="sm" />
+    {% if technos|length %}
+      <ul class="technos">
+        {% for techno in technos %}
+          <li>{% if loop.first == false %} // {% endif %}{{ techno }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  </div>
+</{{ htmlTag }}>

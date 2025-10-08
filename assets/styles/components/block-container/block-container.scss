@@ -1,0 +1,31 @@
+/*!
+ * This file is part of the App package.
+ *
+ * (c) Yipikai <support@yipikai.studio>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+@use "./../../mixin/global" as global;
+@use "./../../mixin/flex" as flex;
+@use "./../../config/config" as config;
+@use "./../../config/font" as font;
+@use './../../config/variables/yipikai' as yipikai;
+
+.block-container {
+  @include flex.display();
+  @include flex.direction(column);
+  gap: 1rem;
+  &.offset {
+    padding-left: 2rem;
+  }
+}
+.block-container + .block-container {
+  margin-top: 3rem;
+}
+.block-container + .title-area {
+  &.title-2 {
+    margin-top: 7.5rem;
+  }
+  margin-top: 2rem;
+}

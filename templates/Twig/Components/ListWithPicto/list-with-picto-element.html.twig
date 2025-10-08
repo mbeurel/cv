@@ -1,0 +1,18 @@
+<{{ htmlTag }} class="element-content {{ class }}">
+  <twig:Picto name="{{ picto }}" />
+
+  {% if url is defined and url %}
+    <a href="{{ url }}" class="element link">
+  {% else %}
+    <span class="element">
+  {% endif %}
+      
+    <span class="entitled">{{ entitled }}</span>
+  
+  {% if url is not defined or url is null %}
+    </span>
+  {% else %}
+    </a>
+  {% endif %}
+
+</{{ htmlTag }}>

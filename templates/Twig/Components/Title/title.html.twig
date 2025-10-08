@@ -1,0 +1,5 @@
+<div {{ attributes.defaults({class: "title-area"~(underline ? " underline" : "")~(upper ? " upper" : "")~(color ? " color" : "")~" "~(theme == "default" ? "title-"~htmlTag|replace({"h": ""}) : theme )}) }}>
+  <{{ htmlTag }} class="title">
+    <span class="value">{% block value %}{{ value|default()|raw() }}{% endblock %}</span>
+  </{{ htmlTag }}>
+</div>

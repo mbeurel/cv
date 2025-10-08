@@ -1,0 +1,77 @@
+/*!
+ * This file is part of the App package.
+ *
+ * (c) Yipikai <support@yipikai.studio>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+@use "./../../mixin/global" as global;
+@use "./../../mixin/flex" as flex;
+@use "./../../config/config" as config;
+@use "./../../config/font" as font;
+@use './../../config/variables/yipikai' as yipikai;
+
+.project-list-container {
+  @include flex.display();
+  @include flex.wrap(wrap);
+  gap: 1rem;
+  padding-bottom: 2rem;
+  --project-element-width: calc(50% - 1rem);
+
+  .project-content {
+    @include flex.display();
+    @include flex.direction(column);
+    width: var(--project-element-width);
+    border: 1px solid var(--color-left-container);
+  }
+
+  .head {
+    @include flex.display();
+    @include flex.direction(column);
+    @include flex.justify-content(center);
+    background: var(--color-left-container);
+    padding: 1rem 1rem;
+    position:relative;
+    gap: 0.2rem;
+    border-bottom: 1px solid var(--color-left-container);
+    .entitled {
+      @extend .font-1-m;
+      font-weight: bold;
+    }
+    .sub-title {
+      @extend .font-1-sm;
+      font-style: italic;
+    }
+    .link-project {
+      top: 50%;
+      transform: translateY(-50%);
+      right: 1rem;
+      position:absolute;
+      height: 1.8rem;
+      width: 1.8rem;
+      .picto {
+        height: 100%;
+        width: 100%;
+        svg {
+          height: 100%;
+          width: 100%;
+        }
+      }
+    }
+  }
+  .content {
+    @include flex.display();
+    @include flex.direction(column);
+    flex: 1;
+    padding: 1rem;
+  }
+  .technos {
+    @include flex.display();
+    @include flex.wrap(wrap);
+    margin-top: auto;
+    padding-top: 1rem;
+    gap: 0.2rem;
+  }
+
+}

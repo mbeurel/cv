@@ -1,0 +1,34 @@
+:root {
+  --scrollbar-width: 0;
+  --width-vw: calc(100vw - var(--scrollbar-width, 0px));
+  --col-gutter: 1rem;
+  --row-gutter: 2rem;
+
+  --font-1-family: 'Lato', sans-serif;
+  --font-2-family: 'Montserrat', sans-serif;
+
+  @for $i from 0 through 12 {
+    --grid--col-#{$i}: span #{$i};
+  }
+  @for $i from 0 through 12 {
+    --grid--col-offset-#{$i}: #{$i+1};
+  }
+  --grid-full: var(--grid--col-12);
+  --grid-full-offset: var(--grid--col-offset-0);
+
+  --width-container-max: 102.4rem;
+
+  --color-black: #000;
+  --color-white: #fff;
+
+  --color-master: rgba(69, 162, 255, 0.45);
+  --color-secondary: rgb(69, 162, 255);
+
+
+
+  --color-text-master: var(--color-black);
+  --color-title: var(--color-black);
+  --color-title-second: var(--color-secondary);
+  --color-left-container: var(--color-master);
+
+}

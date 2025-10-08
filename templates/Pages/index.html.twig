@@ -1,0 +1,251 @@
+{% extends 'Layout/layout.html.twig' %}
+{% block left %}
+  <twig:LeftTop name="Matthieu BEUREL" baseline="" picture="/images/matthieu-beurel-photo.jpg" />
+  <twig:Title htmlTag="h2" value="Contact" underline="{{ true }}"></twig:Title>
+  <twig:BlockContainer>
+    <twig:block name="content">
+      <twig:ListWithPicto children="{{ [
+        {
+          "picto": "yipikai/phone",
+          "entitled": "06.59.60.32.35"
+        },
+        {
+          "picto": "yipikai/mail",
+          "entitled": "matthieu@yipikai.studio"
+        },
+        {
+          "picto": "yipikai/pin-map1",
+          "entitled": "134 route de vertou, 44200 Nantes"
+        },
+        {
+          "picto": "other/github",
+          "entitled": "Github Perso",
+          "url": "https://github.com/mbeurel"
+        },
+        {
+          "picto": "other/github",
+          "entitled": "Github Yipikai Studio",
+          "url": "https://github.com/yipikai-studio"
+        },
+        {
+          "picto": "other/github",
+          "entitled": "Github Austral",
+          "url": "https://github.com/austral-project"
+        },
+        {
+          "picto": "other/linkedin",
+          "entitled": "Linkdedin",
+          "class": "linkedin",
+          "url": "https://www.linkedin.com/in/matthieubeurel/"
+        }
+      ] }}"></twig:ListWithPicto>
+    </twig:block>
+  </twig:BlockContainer>
+  
+  <twig:Title htmlTag="h2" value="Expertise" underline="{{ true }}"></twig:Title>
+  <twig:BlockContainer>
+    <twig:block name="content">
+      <twig:Text wysiwyg="{{ true }}" theme="md">
+        <twig:block name="content">
+          <p><strong>Langages :</strong> PHP, HTML, CSS, JavaScript</p>
+          <p><strong>Frameworks & Outils :</strong> Symfony, Docker, SASS, Storybook, PostgreSQL, MySQL, ElasticSearch, Webpack, PHPStorm, Git</p>
+          <p><strong>Connaissances complémentaires :</strong> LESS, jQuery, Angular, DevOps, Kubernetes, SVN, Redis, BorgMatic, Python, PyCharm</p>
+          <p><strong>Autres expertises :</strong> Accessibilité numérique, optimisation des performances, intégration responsive</p>
+        </twig:block>
+      </twig:Text>
+    </twig:block>
+  </twig:BlockContainer>
+  
+  
+  <twig:Title htmlTag="h2" value="OpenSource" underline="{{ true }}"></twig:Title>
+  <twig:BlockContainer>
+    <twig:block name="content">
+      <twig:Text wysiwyg="{{ true }}" theme="md">
+        <twig:block name="content">
+          <p><strong>Austral</strong><a href="https://github.com/austral-project" class="link-picto"><twig:Picto name="yipikai/link" /></a><br>Bundles Symfony pour back-office, optimisation SEO et performance</p>
+          <p><strong>Container Docker & Kubernetes</strong><a href="https://github.com/mbeurel" class="link-picto"><twig:Picto name="yipikai/link" /></a><br>Environnements de dev et test préconfigurés via Vagrant et scripts bash</p>
+          <p><strong>Extensions Chrome & Librairies PHP</strong><br>Automatisation proxy headless <a href="https://github.com/mbeurel/chrome-proxy-extensions" class="link-picto"><twig:Picto name="yipikai/link" /></a>, Interface PHP pour LibLinear <a href="https://github.com/mbeurel/php-liblinear" class="link-picto"><twig:Picto name="yipikai/link" /></a>, Interface PHP pour Lemmatizer <a href="https://github.com/mbeurel/php-lemmatizer" class="link-picto"><twig:Picto name="yipikai/link" /></a></p>
+        </twig:block>
+      </twig:Text>
+    </twig:block>
+  </twig:BlockContainer>
+  
+  
+  <div class="power-by-content">
+    {# <a class="baseline" href="https://github.com/mbeurel/cv">Powered<br/> by<br/> HTML & CSS</a> #}
+    <a class="baseline" href="https://github.com/mbeurel/cv">Crafted <br/>with <span class="little">❤️</span> using<br/> HTML & CSS</a>
+    <span class="punchline">Je n’allais quand même pas le faire sur Word 😉</span>
+  </div>
+  
+  
+{% endblock %}
+
+
+{% block content %}
+  
+  <twig:Title htmlTag="h2" theme="title-1" upper="{{ true }}" value="Développeur Full Stack <br/> Lead Symfony" ></twig:Title>
+  <twig:BlockContainer>
+    <twig:block name="content">
+      <twig:Text
+        isHeadline="{{ true }}"
+        wysiwyg="{{ true }}"
+        value=""
+        theme="lg"
+      >
+        <twig:block name="content">
+          <p>Développeur Full Stack senior avec plus de <strong>15 ans d’expérience</strong>, spécialisé en <strong>Symfony</strong> et dans le <strong>développement d’applications web sur mesure</strong>.</p>
+          <p>Solide expérience dans la <strong>conception d’architectures complexes</strong>, l’<strong>intégration front-end responsive</strong> et <strong>pixel perfect</strong>, ainsi que le d<strong>éploiement d’environnements</strong> Docker.</p>
+          <p>Contributeur <strong>OpenSource</strong>, passionné par la <strong>performance</strong>, l’<strong>accessibilité numérique</strong> et l’<strong>optimisation continue</strong> des projets digitaux.</p>
+        </twig:block>
+      </twig:Text>
+    </twig:block>
+  </twig:BlockContainer>
+  
+  <twig:Title htmlTag="h2" value="Expériences Professionnelles" underline="{{ true }}"></twig:Title>
+  <twig:Title htmlTag="h3" value="Yipikai Studio – Co-fondateur & Lead Dev" color="{{ true }}"></twig:Title>
+  <twig:BlockContainer offset="{{ true }}">
+    <twig:block name="content">
+      <twig:Title htmlTag="h4">
+        <twig:block name="value">Juin 2021 <twig:Picto name="yipikai/arrow-right"></twig:Picto> Aujourd'hui</twig:block>
+      </twig:Title>
+      <twig:Text wysiwyg="{{ true }}" theme="md" >
+        <twig:block name="content">
+          <ul>
+            <li>Développement Symfony (v4 <twig:Picto name="yipikai/arrow-right"></twig:Picto> 7), intégration HTML/CSS/JS responsive et Accessibilité numérique</li>
+            <li>Définition des besoins clients et rédaction des spécifications techniques</li>
+            <li>DevOps & infogérance</li>
+          </ul>
+        </twig:block>
+      </twig:Text>
+      <twig:Title htmlTag="h4" value="Projets marquants"></twig:Title>
+      <twig:ProjectList children="{{ [
+        {
+          entitled: "Sébastien Geslin",
+          subTitle: "E-commerce Luxe",
+          description: "<p>Gestion project technique & Développement Full-Stack</p>",
+          url: "https://sebastiengeslin.com",
+          technos: [
+            "Symfony", "Stripe", "MarketPlace", "Geolocalisation", "SASS", "VanillaJS"
+          ]
+        },
+        {
+          entitled: "Département Loire Atlantique",
+          subTitle: "Design System OpenSource",
+          description: "<p>Style guide, Front-end & accessibilité numérique</p>",
+          url: "https://design.loire-atlantique.fr",
+          technos: [
+            "VanillaJS", "Jekyll", "SASS", "HTML"
+          ]
+        },
+        {
+          entitled: "Aerofab",
+          subTitle: "Brasserie nantaise",
+          description: "<p>Gestion project technique & Développement Full-Stack</p>",
+          url: "https://aerofab.fr/",
+          technos: [
+            "Symfony", "SASS", "VanillaJS"
+          ]
+        },
+        {
+          entitled: "Application de scraping",
+          subTitle: "Client privé",
+          description: "<p>Gestion project technique & Développement Back</p>",
+          technos: [
+            "Symfony", "Machine Learning", "Chrome Headless", "Panther Symfony", "Mercure", "Automatisation", "API"
+          ]
+        }
+      ] }}"></twig:ProjectList>
+    </twig:block>
+  </twig:BlockContainer>
+  
+  <twig:Title htmlTag="h3" value="Nexboard – Co-fondateur & Lead Dev" color="{{ true }}"></twig:Title>
+  <twig:BlockContainer offset="{{ true }}">
+    <twig:block name="content">
+      <twig:Title htmlTag="h4" value="">
+        <twig:block name="value">Janvier 2017 <twig:Picto name="yipikai/arrow-right"></twig:Picto> Septembre 2022</twig:block>
+      </twig:Title>
+      <twig:Text wysiwyg="{{ true }}" theme="md" >
+        <twig:block name="content">
+          <ul>
+            <li>Plateforme analytics multi-sources (SEO, SEA, Social Media)</li>
+            <li>Développement d’API et scripts de consolidation de données</li>
+            <li>DevOps & déploiement des environnements</li>
+          </ul>
+        </twig:block>
+      </twig:Text>
+    </twig:block>
+  </twig:BlockContainer>
+  
+  <twig:Title htmlTag="h3" value="Freelance – Développeur FullStack" color="{{ true }}"></twig:Title>
+  <twig:BlockContainer offset="{{ true }}">
+    <twig:block name="content">
+      <twig:Title htmlTag="h4" value="">
+        <twig:block name="value">Décembre 2011 <twig:Picto name="yipikai/arrow-right"></twig:Picto> Décembre 2019</twig:block>
+      </twig:Title>
+      <twig:Text wysiwyg="{{ true }}" theme="md" >
+        <twig:block name="content">
+          <ul>
+            <li>Développement Symfony (v2 <twig:Picto name="yipikai/arrow-right"></twig:Picto> 4) et intégration HTML/CSS/JS responsive</li>
+            <li>Définition des besoins clients et rédaction des spécifications techniques</li>
+            <li>DevOps & infogérance</li>
+          </ul>
+        </twig:block>
+      </twig:Text>
+      <twig:Title htmlTag="h4" value="Projets marquants"></twig:Title>
+      <twig:ProjectList children="{{ [
+        {
+          entitled: "Revel'Home",
+          subTitle: "Outils de facturation sur-mesure",
+          description: "<p>Gestion project technique & Développement Full-Stack</p>",
+          technos: [
+            "Symfony", "SASS", "HTML", "JQuery", "API REST"
+          ]
+        },
+        {
+          entitled: "Justify",
+          subTitle: "Outils de facturation sur-mesure",
+          description: "<p>Gestion project technique & Développement Full-Stack</p>",
+          technos: [
+            "Symfony", "Wkhtmltopdf", "LESS", "HTML", "JQuery", "API REST"
+          ]
+        },
+        {
+          entitled: "Position",
+          subTitle: "Application de positionnement Google",
+          description: "<p>Gestion project technique & Développement Back</p>",
+          technos: [
+            "Symgony", "Chrome Headless", "Geolocalisation", "API REST"
+          ]
+        },
+        {
+          entitled: "Engrenage - Jeu interactif",
+          subTitle: "Canal +",
+          description: "<p>Gestion project technique & Développement Back</p>",
+          technos: [
+            "Symfony", "Gameplay", "Emailing", "Social Network"
+          ]
+        },
+      ] }}"></twig:ProjectList>
+    </twig:block>
+  </twig:BlockContainer>
+  
+  <twig:Title htmlTag="h3" value="Intuiti – Développeur / Intégrateur" color="{{ true }}"></twig:Title>
+  <twig:BlockContainer offset="{{ true }}">
+    <twig:block name="content">
+      <twig:Title htmlTag="h4" value="">
+        <twig:block name="value">Décembre 2007 <twig:Picto name="yipikai/arrow-right"></twig:Picto> Décembre 2011</twig:block>
+      </twig:Title>
+      <twig:Text wysiwyg="{{ true }}" theme="md" >
+        <twig:block name="content">
+          <ul>
+            <li>Plateforme analytics multi-sources (SEO, SEA, Social Media)</li>
+            <li>Développement d’API et scripts de consolidation de données</li>
+            <li>DevOps & déploiement des environnements</li>
+          </ul>
+        </twig:block>
+      </twig:Text>
+    </twig:block>
+  </twig:BlockContainer>
+
+
+{% endblock %}
